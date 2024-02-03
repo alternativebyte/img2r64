@@ -1,0 +1,26 @@
+Scale: <input id="scale" value="1"></input><br>
+<b>If your image clips in the level editor, it is because the level code is too big for the game (16,384 chars max, a normal image when converted is usually more than that)</b><br>
+<b>This works by iterating through every pixel in the image, and turning it into a 1x1 lab block in the same position with the same color.</b><br>
+Image: <input type="file" id="image"><br>
+Selected image:<br>
+<sdiv id="preview"></div>
+<script>
+// HEY GET OUTTA HERE YOU RAT
+preview = document.getElementById("preview")
+input = document.getElementById("image")
+const fileTypes = [
+  "image/jpeg",
+  "image/png",
+  "image/tiff",
+  "image/webp"
+];
+function trolo() {
+  window.location.href = "https://www.youtube.com/watch?v=BsIa_LKojJI";
+}
+</script>
+<button id="turnintolevel" onclick="trolo()">Turn into level</button>
+<div style="background-color:lightgray;outline:2px dashed black;">
+<canvas id="imagecanv"></canvas>
+<p id="levelcode" style="background-color:white;outline:2px solid black;margin:8px;padding:8px;">Level code</p>
+<div style="height:4px"></div>
+</div>
